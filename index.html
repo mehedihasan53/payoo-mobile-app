@@ -4,6 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo_mobile_app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body></body>
+  <body
+    class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center"
+  >
+    <div
+      class="h-32 w-80 bg-[url('/assets/bg.png')] bg-cover flex justify-center items-center"
+    >
+      <img src="./assets/Group.png" alt="" />
+    </div>
+    <form class="bg-white w-[400px] rounded-3xl p-8">
+      <div>
+        <label class="font-semibold" for="">Mobile Number</label>
+        <br />
+        <input
+          type="text"
+          placeholder="Enter your number"
+          class="input rounded-[20px] mt-3"
+          id="mobile-number"
+        />
+      </div>
+
+      <div class="mt-3">
+        <label class="font-semibold" for="">4 Digit Pin</label>
+        <br />
+        <input
+          type="text"
+          placeholder="Enter 4 Digit Pin"
+          class="input rounded-[20px] mt-3"
+          id="pin-number"
+        />
+      </div>
+      <button
+        class="btn btn-primary w-full rounded-[20px] mt-3 text-white"
+        id="loginBtn"
+      >
+        Login
+      </button>
+    </form>
+    <script src="scrips.js"></script>
+  </body>
 </html>
