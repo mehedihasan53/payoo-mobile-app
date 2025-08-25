@@ -23,58 +23,204 @@
     />
   </head>
   <body class="bg-[#F4F5F7]">
-    <header
-      class="max-w-lg mx-auto flex justify-between items-center border-b-1 p-4"
-    >
-      <div class="left-nav flex">
-        <img src="./assets/Group.png" alt="" class="w-[50px]" />
-        <div class="mx-4">
-          <h1 class="font-bold">$<span>45000</span></h1>
-          <p class="text-[#08080880]">Available Balance</p>
+    <div class="bg-white max-w-lg mx-auto">
+      <header class="flex justify-between items-center border-b-1 p-4">
+        <div class="left-nav flex">
+          <img src="./assets/Group.png" alt="" class="w-[50px]" />
+          <div class="mx-4">
+            <h1 class="font-bold">
+              $<span id="available-balance">45000</span>
+            </h1>
+            <p class="text-[#08080880]">Available Balance</p>
+          </div>
+        </div>
+        <div class="right-nav">
+          <button class="btn text-[#08080880] rounded-[8px]">
+            <i
+              class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#66768]"
+            ></i>
+            Log out
+          </button>
+        </div>
+      </header>
+
+      <div class="banner mt-4 p-4">
+        <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
+        <p class="text-[#08080880] mt-3">
+          Enjoy easy and convenient financial services with us. Cash out charge
+          is low and
+        </p>
+      </div>
+      <div class="grid grid-cols-3 gap-4 p-4">
+        <div
+          id="add-money-click"
+          class="text-center border-1 border-[#0808081A] p-4 rounded-2xl"
+        >
+          <img src="./assets/wallet1.png" alt="" class="mx-auto" />
+          <h1>Add Money</h1>
+        </div>
+        <div
+          id="cash-out-click"
+          class="text-center border-1 border-[#0808081A] p-4 rounded-2xl"
+        >
+          <img src="./assets/send1.png" alt="" class="mx-auto" />
+          <h1>Cash out</h1>
+        </div>
+        <div
+          id="transfer-money-click"
+          class="text-center border-1 border-[#0808081A] p-4 rounded-2xl"
+        >
+          <img src="./assets/money1.png" alt="" class="mx-auto" />
+          <h1>Transfer Money</h1>
+        </div>
+        <div
+          id="get-bonus-click"
+          class="text-center border-1 border-[#0808081A] p-4 rounded-2xl"
+        >
+          <img src="./assets/bonus1.png" alt="" class="mx-auto" />
+          <h1>Get Bonus</h1>
+        </div>
+        <div
+          id="pay-bill-click"
+          class="text-center border-1 border-[#0808081A] p-4 rounded-2xl"
+        >
+          <img src="./assets/purse1.png" alt="" class="mx-auto" />
+          <h1>Pay Bill</h1>
+        </div>
+        <div
+          id="transaction-click"
+          class="text-center border-1 border-[#0808081A] p-4 rounded-2xl"
+        >
+          <img src="./assets/transaction1.png" alt="" class="mx-auto" />
+          <h1>Transactions</h1>
         </div>
       </div>
-      <div class="right-nav">
-        <button class="btn text-[#08080880] rounded-[8px]">
-          <i
-            class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#66768]"
-          ></i>
-          Log out
-        </button>
-      </div>
-    </header>
+    </div>
 
-    <div class="banner max-w-lg mx-auto mt-4">
-      <h1 class="font-bold text-2xl">🔥 Welcome to Payooo!</h1>
-      <p class="text-[#08080880] mt-3">
-        Enjoy easy and convenient financial services with us. Cash out charge is
-        low and
-      </p>
+    <!-- add money form section -->
+
+    <div class="max-w-lg mx-auto" id="add-money-section">
+      <label class="block font-bold p-4">Add Money</label>
+      <form class="bg-white p-4 rounded-2xl mx-6">
+        <div class="mt-3">
+          <label class="font-semibold">Select A Bank</label> <br />
+          <fieldset class="fieldset" id="bank">
+            <select id="bank-select" class="select rounded-[20px] mt-3 w-full">
+              <option disabled selected>Select Bank</option>
+              <option>AB Bank</option>
+              <option>Porbali Bank</option>
+              <option>Islami Bank</option>
+            </select>
+          </fieldset>
+        </div>
+
+        <div class="mt-3">
+          <label class="font-semibold" for="">Bank Account Number</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter 11 digit account number"
+            class="input rounded-[20px] mt-3 w-full"
+            id="account-number"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label class="font-semibold" for="">Amount to Add</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Add Amount to withdraw"
+            class="input rounded-[20px] mt-3 w-full"
+            id="add-amount"
+          />
+        </div>
+        <div class="mt-3">
+          <label class="font-semibold" for="">Pin Number</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input rounded-[20px] mt-3 w-full"
+            id="add-pin"
+          />
+        </div>
+        <button
+          class="btn bg-[#0874F2] w-full rounded-[20px] mt-3 text-white"
+          id="add-money-btn"
+        >
+          Add Money
+        </button>
+      </form>
     </div>
-    <div>
-      <div class="text-center border-1">
-        <img src="./assets/wallet1.png" alt="" class="mx-auto" />
-        <h1>Add Money</h1>
-      </div>
-      <div class="text-center border-1">
-        <img src="./assets/send1.png" alt="" class="mx-auto" />
-        <h1>Cash out</h1>
-      </div>
-      <div class="text-center border-1">
-        <img src="./assets/money1.png" alt="" class="mx-auto" />
-        <h1>Transfer Money</h1>
-      </div>
-      <div class="text-center border-1">
-        <img src="./assets/bonus1.png" alt="" class="mx-auto" />
-        <h1>Get Bonus</h1>
-      </div>
-      <div class="text-center border-1">
-        <img src="./assets/purse1.png" alt="" class="mx-auto" />
-        <h1>Pay Bill</h1>
-      </div>
-      <div class="text-center border-1">
-        <img src="./assets/transaction1.png" alt="" class="mx-auto" />
-        <h1>Transactions</h1>
-      </div>
+
+    <!-- cash out form section -->
+
+    <div class="max-w-lg mx-auto" id="cash-out-section">
+      <label class="my-5 font-bold p-4 block">Cash Out</label>
+      <form class="bg-white p-4 rounded-2xl mx-6">
+        <div class="mt-3">
+          <label class="font-semibold" for="">Agent Number</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter 11 digit number"
+            class="input rounded-[20px] mt-3 w-full"
+            id="agent-account-number"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label class="font-semibold" for="">Amount</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter amount to withdraw"
+            class="input rounded-[20px] mt-3 w-full"
+            id="withdraw-amount"
+          />
+        </div>
+        <div class="mt-3">
+          <label class="font-semibold" for="">Pin Number</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input rounded-[20px] mt-3 w-full"
+            id="add-pin"
+          />
+        </div>
+        <button
+          class="btn bg-[#0874F2] w-full rounded-[20px] mt-3 text-white"
+          id="add-money-btn"
+        >
+          Add Money
+        </button>
+      </form>
     </div>
+
+    <!-- Transfer Money form section -->
+
+    <div class="max-w-lg mx-auto" id="transfer-money-section">
+      <label class="my-5 font-bold p-4 block">Transfer Money</label>
+    </div>
+
+    <!-- Get Bonus form section -->
+
+    <div class="max-w-lg mx-auto" id="get-bonus-section">
+      <label class="my-5 font-bold p-4 block">Get Bonus</label>
+    </div>
+    <!-- Pay Bill form section -->
+
+    <div class="max-w-lg mx-auto" id="pay-bill-section">
+      <label class="my-5 font-bold p-4 block">Pay Bill</label>
+    </div>
+    <!-- Transactions form section -->
+
+    <div class="max-w-lg mx-auto" id="transaction-section">
+      <label class="my-5 font-bold p-4 block">Transactions</label>
+    </div>
+
+    <script src="home.js"></script>
   </body>
 </html>
